@@ -12,6 +12,8 @@
 		82B11B6E21AB4FC1008D1C84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B11B6C21AB4FC1008D1C84 /* Main.storyboard */; };
 		82B11B7021AB4FC3008D1C84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82B11B6F21AB4FC3008D1C84 /* Assets.xcassets */; };
 		82B11B7321AB4FC3008D1C84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B11B7121AB4FC3008D1C84 /* LaunchScreen.storyboard */; };
+		82B11B7D21AB5238008D1C84 /* Tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82B11B7B21AB5238008D1C84 /* Tasks.xcdatamodeld */; };
+		82B11B8021AB537B008D1C84 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B11B7F21AB537B008D1C84 /* Task+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		82B11B6F21AB4FC3008D1C84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82B11B7221AB4FC3008D1C84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82B11B7421AB4FC3008D1C84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82B11B7C21AB5238008D1C84 /* Tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tasks.xcdatamodel; sourceTree = "<group>"; };
+		82B11B7F21AB537B008D1C84 /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		82B11B6721AB4FC1008D1C84 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				82B11B6821AB4FC1008D1C84 /* AppDelegate.swift */,
+				82B11B7E21AB5246008D1C84 /* Model */,
 				82B11B6A21AB4FC1008D1C84 /* ViewController.swift */,
 				82B11B6C21AB4FC1008D1C84 /* Main.storyboard */,
-				82B11B6F21AB4FC3008D1C84 /* Assets.xcassets */,
 				82B11B7121AB4FC3008D1C84 /* LaunchScreen.storyboard */,
-				82B11B7421AB4FC3008D1C84 /* Info.plist */,
+				82B11B7A21AB51F5008D1C84 /* Resources */,
 			);
 			path = Tasks;
+			sourceTree = "<group>";
+		};
+		82B11B7A21AB51F5008D1C84 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82B11B6821AB4FC1008D1C84 /* AppDelegate.swift */,
+				82B11B6F21AB4FC3008D1C84 /* Assets.xcassets */,
+				82B11B7421AB4FC3008D1C84 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		82B11B7E21AB5246008D1C84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82B11B7B21AB5238008D1C84 /* Tasks.xcdatamodeld */,
+				82B11B7F21AB537B008D1C84 /* Task+Convenience.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B11B8021AB537B008D1C84 /* Task+Convenience.swift in Sources */,
 				82B11B6B21AB4FC1008D1C84 /* ViewController.swift in Sources */,
 				82B11B6921AB4FC1008D1C84 /* AppDelegate.swift in Sources */,
+				82B11B7D21AB5238008D1C84 /* Tasks.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Tasks/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Tasks/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Tasks/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +358,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		82B11B7B21AB5238008D1C84 /* Tasks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				82B11B7C21AB5238008D1C84 /* Tasks.xcdatamodel */,
+			);
+			currentVersion = 82B11B7C21AB5238008D1C84 /* Tasks.xcdatamodel */;
+			path = Tasks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 82B11B5D21AB4FC1008D1C84 /* Project object */;
 }
