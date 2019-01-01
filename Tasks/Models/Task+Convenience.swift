@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 extension Task {
-    convenience init(name: String, notes: String? = nil, managedObjectContex: NSManagedObjectContext) {
+    convenience init(name: String, notes: String? = nil, managedObjectContex: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
         self.init(context: managedObjectContex)
         

@@ -135,7 +135,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="DwK-uA-qzS" id="1cK-Aq-56I"/>
-                        <outlet property="notesTextView" destination="SWw-Yc-C8a" id="6B2-XH-RdH"/>
+                        <outlet property="notesTextView" destination="xv7-9v-gsN" id="edX-FJ-HNF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szs-wt-Hce" userLabel="First Responder" sceneMemberID="firstResponder"/>
