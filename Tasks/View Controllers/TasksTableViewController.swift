@@ -15,8 +15,13 @@ class TasksTableViewController: UITableViewController {
     let addSegue = "addSegue"
     let cellSegue = "cellSegue"
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        for task in tasks {
+            print("priority: \(task.priority!)")
+        }
+        
         tableView.reloadData()
     }
 
