@@ -9,12 +9,20 @@
 import Foundation
 import CoreData
 
+enum TaskPriority: String {
+    case low, normal, high, critical
+}
+
 extension Task {
-    convenience init(name: String, notes: String? = nil, managedObjectContex: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
+    convenience init(name: String,
+                     notes: String? = nil,
+                     priority: TaskPriority = .normal,
+                     managedObjectContex: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
         
         self.init(context: managedObjectContex)
         
         self.name = name
         self.notes = notes
+        self.priority = priority.rawValue
     }
 }

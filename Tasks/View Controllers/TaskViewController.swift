@@ -13,6 +13,7 @@ class TaskViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var notesTextView: UITextView!
+    @IBOutlet weak var priorityControl: UISegmentedControl!
     
     var task: Task? {
         didSet { updateViews() }
@@ -29,7 +30,6 @@ class TaskViewController: UIViewController {
         
         if let task = task {
             // Edit an existing task
-            task.name = name
             task.notes = notes
         } else {
             // Create a new task
