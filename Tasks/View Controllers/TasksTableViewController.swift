@@ -18,10 +18,6 @@ class TasksTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        for task in tasks {
-            print("priority: \(task.priority!)")
-        }
-        
         tableView.reloadData()
     }
 
@@ -61,7 +57,7 @@ class TasksTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == cellSegue {
-            let detailVC = segue.destination as! TaskViewController
+            let detailVC = segue.destination as! TaskDetailViewController
             if let indexPath = tableView.indexPathForSelectedRow {
                 detailVC.task = tasks[indexPath.row]
             }

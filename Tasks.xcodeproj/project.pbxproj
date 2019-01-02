@@ -15,7 +15,7 @@
 		82B11B8021AB537B008D1C84 /* Task+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B11B7F21AB537B008D1C84 /* Task+Convenience.swift */; };
 		82B11B8221AB552F008D1C84 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B11B8121AB552F008D1C84 /* CoreDataStack.swift */; };
 		82B11B8421AB6A62008D1C84 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B11B8321AB6A62008D1C84 /* TasksTableViewController.swift */; };
-		82B11B8821AB6B8F008D1C84 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B11B8721AB6B8F008D1C84 /* TaskViewController.swift */; };
+		82B11B8821AB6B8F008D1C84 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B11B8721AB6B8F008D1C84 /* TaskDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		82B11B7F21AB537B008D1C84 /* Task+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+Convenience.swift"; sourceTree = "<group>"; };
 		82B11B8121AB552F008D1C84 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		82B11B8321AB6A62008D1C84 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
-		82B11B8721AB6B8F008D1C84 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		82B11B8721AB6B8F008D1C84 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				82B11B8321AB6A62008D1C84 /* TasksTableViewController.swift */,
-				82B11B8721AB6B8F008D1C84 /* TaskViewController.swift */,
+				82B11B8721AB6B8F008D1C84 /* TaskDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 				82B11B8021AB537B008D1C84 /* Task+Convenience.swift in Sources */,
 				82B11B6921AB4FC1008D1C84 /* AppDelegate.swift in Sources */,
 				82B11B7D21AB5238008D1C84 /* Tasks.xcdatamodeld in Sources */,
-				82B11B8821AB6B8F008D1C84 /* TaskViewController.swift in Sources */,
+				82B11B8821AB6B8F008D1C84 /* TaskDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

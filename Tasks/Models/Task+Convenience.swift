@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-enum TaskPriority: String {
+enum TaskPriority: String, CaseIterable {
     case low, normal, high, critical
 }
 

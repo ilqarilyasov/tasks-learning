@@ -1,5 +1,5 @@
 //
-//  TaskViewController.swift
+//  TaskDetailViewController.swift
 //  Tasks
 //
 //  Created by Ilgar Ilyasov on 11/25/18.
@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class TaskViewController: UIViewController {
+class TaskDetailViewController: UIViewController {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var notesTextView: UITextView!
@@ -27,13 +27,17 @@ class TaskViewController: UIViewController {
     @IBAction func saveTapped(_ sender: Any) {
         guard let name = nameTextField.text, !name.isEmpty else { return }
         let notes = notesTextView.text
+        let priorityIndex = priorityControl.selectedSegmentIndex
+        let priority = TaskPriority.allCases[priorityIndex]
         
         if let task = task {
             // Edit an existing task
+            task.name = name
             task.notes = notes
+            task.priority = priority.rawValue
         } else {
             // Create a new task
-            @discardableResult let _ = Task(name: name, notes: notes)
+            @discardableResult let _ = Task(name: name, notes: notes, priority: priority)
         }
         
         do {
@@ -54,12 +58,14 @@ class TaskViewController: UIViewController {
         nameTextField.text = task?.name
         notesTextView.text = task?.notes
         
-//        if let task = task {
-//            nameTextField.text = task.name
-//            notesTextView.text = task.notes
-//            title = task.name
-//        } else {
-//            title = "Create Task"
-//        }
+        let priority: TaskPriority
+        
+        if let taskPriority = task?.priority {
+            priority = TaskPriority(rawValue: taskPriority)!
+        } else {
+            priority = .normal
+        }
+        
+        priorityControl.selectedSegmentIndex = TaskPriority.allCases.index(of: priority)!
     }
 }
